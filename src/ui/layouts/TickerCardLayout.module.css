@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--dimension-2);
+
+    width: fit-content;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color-text);
+
+    svg {
+        width: var(--dimension-2);
+        height: var(--dimension-2);
+    }
+}
