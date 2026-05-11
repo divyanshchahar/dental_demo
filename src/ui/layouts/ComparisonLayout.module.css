@@ -1,0 +1,30 @@
+.container {
+    border-radius: var(--radius-1);
+    position: relative;
+    width: fit-content;
+    max-width: var(--max-widht-m);
+    /*max-width: 100px;*/
+}
+
+.comparisonImage {
+    width: 100%;
+    height: auto;
+}
+
+.treatmentNamecontainer {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%);
+
+    padding: var(--dimension-1);
+    width: fit-content;
+    border-radius: var(--radius-1);
+
+    background-color: var(--color-text);
+    color: var(--color-background);
+}
+
+.roundedBorder {
+    border-radius: var(--radius-1);
+}
