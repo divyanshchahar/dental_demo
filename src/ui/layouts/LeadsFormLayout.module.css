@@ -1,0 +1,42 @@
+.container {
+    background-color: transparent;
+    color: var(--color-text);
+
+    --border-color: var(--color-border);
+    --foreground-color: var(--color-foreground);
+    --error-color: var(--color-danger);
+    --text-color: var(--color-text);
+
+    input, textarea, select {
+        padding: var(--dimension-1);
+        background-color: inherit;
+        color: inherit;
+
+        border: 1px solid var(--text-color);
+        border-radius: var(--radius-1);
+
+        width: 100%;
+    }
+
+    label {
+        margin-top: var(--dimension-3);
+        margin-bottom: var(--dimension-1);
+        display: block;
+        color: inherit;
+    }
+
+    button {
+        margin-top: var(--dimension-3);
+    }
+
+    .error {
+        color: var(--error-color);
+        margin-top: var(--dimension-1);
+    }
+
+    .errorFocused {
+        outline: 1px solid var(--error-color);
+    }
+
+}
+
