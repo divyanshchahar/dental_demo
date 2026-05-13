@@ -23,6 +23,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 60vh;
 
     .brandedText {
         color: var(--color-brand);
@@ -35,6 +36,7 @@
     align-items: center;
     justify-content: center;
     gap: var(--dimension-8);
+    max-width: var(--max-widht-m);
 }
 
 .reviewContainer {
