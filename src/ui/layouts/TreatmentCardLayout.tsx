@@ -22,7 +22,8 @@ export const TreatmentCardLayout = ({
 
             <p>{treatmentDescription}</p>
 
-            <ButtonComponent version={"cta"} state={"ready"} colorScheme={colorScheme}>Book Free Call</ButtonComponent>
+            <ButtonComponent version={"cta"} state={"ready"} colorScheme={colorScheme} clickHandler={() => {
+            }}>Book Free Call</ButtonComponent>
         </div>
     );
 };
