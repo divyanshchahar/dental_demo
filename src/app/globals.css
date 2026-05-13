@@ -122,19 +122,19 @@
 
 .heading1 {
     font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
 }
 
 .heading2 {
     font-size: var(--font-size-h2);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
 }
 
 .heading3 {
     font-size: var(--font-size-h3);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
 }
 
@@ -146,13 +146,13 @@
 
 .heading5 {
     font-size: var(--font-size-h5);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
 }
 
 .heading6 {
     font-size: var(--font-size-h5);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-heading);
 }
 
