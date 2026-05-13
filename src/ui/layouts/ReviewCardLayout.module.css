@@ -9,7 +9,7 @@
 
     background-color: var(--color-foreground);
 
-    max-width: var(--max-widht-m);
+    max-width: var(--max-width-xs);
 
     border-radius: var(--radius-1);
 
@@ -40,6 +40,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    margin-top:auto;
 
     svg {
         height: var(--dimension-4);
