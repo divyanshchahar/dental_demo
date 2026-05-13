@@ -22,7 +22,9 @@ export const HeroSectionLayout = () => {
                         className={`heading1 ${styles.brandedText}`}>One Sitting</span>
                     </p>
 
-                    <ButtonComponent version={"cta"} state={"ready"} colorScheme={"colorScheme1"}>Book a Free
+                    <ButtonComponent version={"cta"} state={"ready"} colorScheme={"colorScheme1"}
+                                     clickHandler={() => {
+                                     }}>Book a Free
                         Call</ButtonComponent>
                 </div>
             </div>
