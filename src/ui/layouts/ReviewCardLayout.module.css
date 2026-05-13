@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-3);
+
+    padding: var(--dimension-3);
+
+    color: var(--color-text);
+
+    background-color: var(--color-foreground);
+
+    max-width: var(--max-width-xs);
+
+    border-radius: var(--radius-1);
+
+    /*border: 1px solid var(--color-border);*/
+
+    svg {
+        height: var(--dimension-2);
+        width: var(--dimension-2);
+    }
+}
+
+.ratingContainer {
+    display: flex;
+    flex-direction: row;
+    gap: var(--dimension-1);
+}
+
+.reviewerDetailsContainer {
+    display: flex;
+    flex-direction: row;
+    gap: var(--dimension-2);
+
+    align-items: center;
+}
+
+.bottomContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top:auto;
+
+    svg {
+        height: var(--dimension-4);
+        width: var(--dimension-4);
+    }
+}
+
+.reviewHeading {
+    color: var(--color-text);
+}

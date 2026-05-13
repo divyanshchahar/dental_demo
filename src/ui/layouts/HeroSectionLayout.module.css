@@ -1,0 +1,72 @@
+.container {
+    background: linear-gradient(var(--color-black-1), var(--color-black-2));
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dimension-5);
+
+    max-width: var(--max-width-xxl);
+
+    padding: var(--dimension-4);
+
+    text-align: center;
+
+    color: white;
+
+    margin: auto;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 50%), rgba(0, 0, 0, 50%)), url("./../../../public/pictures/hero_section.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+
+    .brandedText {
+        color: var(--color-brand);
+    }
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dimension-8);
+    max-width: var(--max-widht-m);
+}
+
+.reviewContainer {
+    display: flex;
+    flex-direction: row;
+    gap: var(--dimension-1);
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    padding: var(--dimension-1);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: calc((var(--dimension-1) * 2) + (1.5 * var(--font-size-m)));
+
+    width: fit-content;
+
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    background: transparent;
+
+    svg {
+        height: var(--font-size-m);
+        width: var(--font-size-m);
+        display: inline-block;
+    }
+
+    .goldenText {
+        color: #FFC107;
+    }
+}

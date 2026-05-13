@@ -1,0 +1,21 @@
+.common {
+    cursor: pointer;
+    padding: var(--dimension-1) var(--dimension-2);
+    border-radius: var(--radius-1);
+    width: fit-content;
+}
+
+.cta {
+    background: var(--color-blue-3);
+    color: var(--color-white-1);
+}
+
+.basic {
+    background: var(--color-foreground);
+    color: var(--color-text);
+}
+
+.disabled {
+    opacity: 0.5;
+    border: 1px solid var(--color-border);
+}

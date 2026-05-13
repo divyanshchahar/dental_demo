@@ -1,0 +1,86 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dimension-5);
+    padding: var(--spacing-section-l) var(--spacing-section-m);
+
+    color: var(--color-text);
+
+    background-color: var(--color-background);
+
+    border : 1px solid var(--color-border);
+}
+
+.detailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--dimension-4);
+    max-width: var(--max-width-xxl);
+}
+
+/*note: The breakpoint of 679 was calculated after experimenting with the layout, please don't change it'*/
+@media screen and (min-width: 679px) {
+    .detailsContainer {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.upperContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--dimension-2);
+    align-self: stretch;
+}
+
+.branding {
+    display: flex;
+    flex-direction: row;
+    gap: var(--font-size-l);
+    color: var(--color-brand);
+    fill: var(--color-brand);
+
+    svg {
+        height: var(--dimension-4);
+        width: var(--dimension-4);
+    }
+}
+
+.socialMediaLogos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dimension-4);
+
+
+    svg {
+        width: var(--dimension-4);
+        height: var(--dimension-4);
+    }
+}
+
+
+.workingHours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--dimension-1);
+}
+
+
+.seprator {
+    height: 1px;
+    width: 100%;
+
+    border: 1px solid var(--color-border);
+}
+
+.copyrightText {
+    color: var(--color-border);
+}
