@@ -3,8 +3,8 @@
     flex-direction: column;
     gap: var(--dimension-3);
 
-    max-width: var(--max-widht-m);
-    min-width: var(--max-width-xxs);
+    max-width: var(--max-width-xs);
+    width:100%;
 
     padding: var(--dimension-3);
 
