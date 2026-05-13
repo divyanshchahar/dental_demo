@@ -35,7 +35,7 @@ export const ReviewCardLayout = ({
             <div className={styles.bottomContainer}>
 
                 <div className={`${styles.reviewerDetailsContainer} boldN`}>
-                    <AvatarPrimitive avatarUrl={""} colorScheme={colorScheme}/>
+                    <AvatarPrimitive avatarUrl={reviewersImage} colorScheme={colorScheme}/>
                     {reviewersName}
                 </div>
 
