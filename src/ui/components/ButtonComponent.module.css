@@ -6,8 +6,8 @@
 }
 
 .cta {
-    background: var(--color-brand);
-    color: var(--color-background);
+    background: var(--color-blue-3);
+    color: var(--color-white-1);
 }
 
 .basic {
