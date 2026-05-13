@@ -14,7 +14,7 @@ interface FormInputsType {
     lastName: string;
     email: string;
     phone: string;
-    message: string;
+    query: string;
 }
 
 export default function LeadsFormLayout({colorScheme}: LeadsFormLayoutPropTypes) {
@@ -66,6 +66,14 @@ export default function LeadsFormLayout({colorScheme}: LeadsFormLayoutPropTypes)
                    className={`${errors.phone && styles.errorFocused}`}/>
 
             <p className={`${styles.error}`}>{errors.phone?.message}</p>
+
+            {/*mesasge*/}
+            <label className={`boldS`}>Query</label>
+
+            <textarea {...register("query", {required: "Please fill your query"})}
+                   className={`${errors.phone && styles.errorFocused}`}/>
+
+            <p className={`${styles.error}`}>{errors.query?.message}</p>
 
 
             {/*submit button*/}
