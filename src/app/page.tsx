@@ -26,7 +26,13 @@ import ReplyRateIcon from "../../public/icons/ReplyRateIcon";
 import ConfidentialIcon from "../../public/icons/ConfidentialIcon";
 import LeadsFormLayout from "@/ui/layouts/LeadsFormLayout";
 import SmileMakeoverIcon from "../../public/icons/SmileMakeoverIcon";
+import {useState} from "react";
+import {AlertDialog} from "radix-ui";
 
+
+export interface SectioPropTypes {
+    clickHandler: () => void
+}
 
 const TestimonialSection = () => {
     return (
@@ -108,7 +114,7 @@ const FAQSection = () => {
     )
 }
 
-const CTASection = () => {
+const CTASection = ({clickHandler}: SectioPropTypes) => {
     return (
         <div className={`colorScheme3 ${styles.paddedContainer} ${styles.ctaContainer}`}>
             <div className={`${styles.flexContainer3} ${styles.mContainer}`}>
@@ -119,14 +125,14 @@ const CTASection = () => {
                     life.
                 </p>
 
-                <ButtonComponent version={"cta"} state={"ready"} clickHandler={() => {
-                }}> Book Free Call </ButtonComponent>
+                <ButtonComponent version={"cta"} state={"ready"} clickHandler={clickHandler}
+                                 colorScheme={"colorScheme3"}> Book Free Call </ButtonComponent>
             </div>
         </div>
     )
 }
 
-const TreatmentsSection = () => {
+const TreatmentsSection = ({clickHandler}: SectioPropTypes) => {
     return (
         <div className={`colorScheme1 ${styles.paddedContainer}`}>
             <div className={`${styles.flexContainer1} ${styles.xxlContainer}`}>
@@ -138,32 +144,32 @@ const TreatmentsSection = () => {
                     <TreatmentCardLayout treatmentIcon={<DentalImplantIcon/>}
                                          treatmentName={"Dental Implants and Caps"}
                                          treatmentDescription={"Durable restoration that looks and feels natural."}
-                                         colorScheme={"colorScheme1"}/>
+                                         colorScheme={"colorScheme1"} clickHandler={clickHandler}/>
 
                     <TreatmentCardLayout treatmentIcon={<DenturesIcon/>}
                                          treatmentName={"Complete Dentures"}
                                          treatmentDescription={"Custom fit dentures restore what time takes away."}
-                                         colorScheme={"colorScheme1"}/>
+                                         colorScheme={"colorScheme1"} clickHandler={clickHandler}/>
 
                     <TreatmentCardLayout treatmentIcon={<RCTIcon/>} treatmentName={"Root Canal"}
                                          treatmentDescription={"We save teeth that deserve saving. Precision magnification and modern technique mean success rates that matter."}
-                                         colorScheme={"colorScheme1"}/>
+                                         colorScheme={"colorScheme1"} clickHandler={clickHandler}/>
                     <TreatmentCardLayout treatmentIcon={<ShinningTeethIcon/>}
                                          treatmentName={"Teeth Whitening"}
                                          treatmentDescription={"Professional results that brighten your smile."}
-                                         colorScheme={"colorScheme1"}/>
+                                         colorScheme={"colorScheme1"} clickHandler={clickHandler}/>
 
                     <TreatmentCardLayout treatmentIcon={<SmileMakeoverIcon/>}
                                          treatmentName={"Smile Makeover"}
                                          treatmentDescription={"Comprehensive planning transforms your smile completely."}
-                                         colorScheme={"colorScheme1"}/>
+                                         colorScheme={"colorScheme1"} clickHandler={clickHandler}/>
                 </div>
             </div>
         </div>
     )
 }
 
-const ReachoutSection = () => {
+const ReachoutSection = ({clickHandler}: SectioPropTypes) => {
 
     const colorScheme = "colorScheme2";
 
@@ -208,16 +214,50 @@ const ReachoutSection = () => {
 }
 
 export default function Home() {
+
+    const [isAlertOpen, setIsAlertOpen] = useState(false)
+
+    const toggleAlert = () => {
+        setIsAlertOpen(!isAlertOpen);
+    }
+
     return (
         <>
-            <HeroSectionLayout/>
+            <HeroSectionLayout clickHandler={toggleAlert}/>
             <TestimonialSection/>
             <ResultsSection/>
             <FAQSection/>
-            <CTASection/>
-            <TreatmentsSection/>
-            <ReachoutSection/>
+            <CTASection clickHandler={toggleAlert}/>
+            <TreatmentsSection clickHandler={toggleAlert}/>
+            <ReachoutSection clickHandler={toggleAlert}/>
             <FooterLayout/>
+
+            <AlertDialog.Root open={isAlertOpen} onOpenChange={toggleAlert}>
+
+                <AlertDialog.Portal>
+                    <AlertDialog.Overlay className={styles.AlertDialogOverlay}/>
+
+                    <AlertDialog.Content className={`${styles.AlertDialogContent} colorScheme2`}>
+
+                        <AlertDialog.Title className={`${styles.AlertDialogTitle} boldL`}>
+                            Contact developer to enable this feature
+                        </AlertDialog.Title>
+
+                        <AlertDialog.Description className={`${styles.AlertDialogDescription} normalN`}>
+                            This feature is not available in demo website. Please contact <span className={"boldN"}>Divyansh Chahar</span> on <span
+                            className={"boldN"}>+91-9599698815</span> or write us an email at <span
+                            className={"boldN"}>mail@leondevs.tech</span>
+                        </AlertDialog.Description>
+
+                        <div style={{display: "flex", justifyContent: "flex-end"}}>
+                            <AlertDialog.Cancel asChild>
+                                <button>Cancel</button>
+                            </AlertDialog.Cancel>
+                        </div>
+                    </AlertDialog.Content>
+                </AlertDialog.Portal>
+
+            </AlertDialog.Root>
         </>
     );
 }
