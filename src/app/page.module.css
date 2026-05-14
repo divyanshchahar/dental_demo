@@ -148,3 +148,79 @@
         display: none;
     }
 }
+
+/*################*/
+/*# ALERTDIALOGE #*/
+/*################*/
+
+.AlertDialogOverlay {
+    backdrop-filter: blur(2px);
+    position: fixed;
+    inset: 0;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.AlertDialogContent {
+    background-color: var(--color-background);
+    border-radius: var(--radius-1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - var(--spacing-global)), -50%);
+    /*width: ;*/
+    width: 100vw;
+    margin: 0 var(--spacing-global);
+    max-width: var(--max-widht-m);
+    padding: var(--dimension-3);
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+
+    border: 1px solid var(--color-border);
+
+    --text-color: var(--color-text);
+    --background-color: var(--color-background);
+    --foreground-color: var(--color-foreground);
+
+    .AlertDialogTitle {
+        margin-bottom: var(--dimension-2);
+        color: var(--text-color);
+    }
+
+    .AlertDialogDescription {
+
+        margin-bottom: var(--dimension-2);
+    }
+
+    button {
+        padding: var(--dimension-1) var(--dimension-2);
+        background-color: var(--foreground-color);
+        border-radius: var(--radius-1);
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+.AlertDialogContent:focus {
+    outline: none;
+}
+
+@keyframes overlayShow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes contentShow {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
