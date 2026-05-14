@@ -6,13 +6,15 @@ export type TreatmentCardLayoutPropTypes = {
     treatmentName: string
     treatmentDescription: string
     colorScheme: string
+    clickHandler: () => void;
 };
 
 export const TreatmentCardLayout = ({
                                         treatmentIcon,
                                         treatmentName,
                                         treatmentDescription,
-                                        colorScheme
+                                        colorScheme,
+                                        clickHandler,
                                     }: TreatmentCardLayoutPropTypes) => {
     return (
         <div className={`${styles.container} ${colorScheme}`}>
@@ -22,8 +24,7 @@ export const TreatmentCardLayout = ({
 
             <p>{treatmentDescription}</p>
 
-            <ButtonComponent version={"cta"} state={"ready"} colorScheme={colorScheme} clickHandler={() => {
-            }}>Book Free Call</ButtonComponent>
+            <ButtonComponent version={"cta"} state={"ready"} colorScheme={colorScheme} clickHandler={clickHandler}>Book Free Call</ButtonComponent>
         </div>
     );
 };

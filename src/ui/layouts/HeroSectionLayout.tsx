@@ -3,8 +3,11 @@ import StarIcon from "../../../public/icons/StarIcon";
 import GoogleIcon from "../../../public/icons/GoogleIcon";
 import {ButtonComponent} from "@/ui/components/ButtonComponent";
 
+export interface HeroSectionLayoutProps {
+    clickHandler: () => void
+}
 
-export const HeroSectionLayout = () => {
+export const HeroSectionLayout = ({clickHandler}: HeroSectionLayoutProps) => {
     return (
         <div className={styles.container}>
             <div className={`${styles.imageContainer} colorScheme1`}>
@@ -23,8 +26,7 @@ export const HeroSectionLayout = () => {
                     </p>
 
                     <ButtonComponent version={"cta"} state={"ready"} colorScheme={"colorScheme1"}
-                                     clickHandler={() => {
-                                     }}>Book a Free
+                                     clickHandler={clickHandler}>Book a Free
                         Call</ButtonComponent>
                 </div>
             </div>

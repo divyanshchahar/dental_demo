@@ -18,6 +18,10 @@
         height: var(--dimension-3);
         color: var(--color-text);
     }
+
+    button{
+        margin-top:auto;
+    }
 }
 
 .treatmentText {

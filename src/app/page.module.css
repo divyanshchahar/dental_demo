@@ -1,142 +1,226 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
+.paddedContainer {
+    padding: var(--spacing-section-l) var(--spacing-global);
+    background-color: var(--color-background);
 
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+    h2 {
+        margin-bottom: var(--dimension-5);
+    }
 }
 
-.main {
-  display: flex;
-  flex: 1;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+/*#####################################################################*/
+
+.flexContainer1 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-5);
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    --border-color: var(--color-border);
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+@media screen and (min-width: 480px) {
+    .flexContainer1 {
+        gap: var(--dimension-10);
+    }
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+/*#####################################################################*/
+
+.flexContainer2 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-4);
+    margin: auto;
+    justify-content: center;
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+@media screen and (min-width: 960px) {
+    .flexContainer2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
+/*#####################################################################*/
+
+.flexContainer3 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-4);
+    align-items: center;
+    margin: auto;
+    text-align: center;
 }
 
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+/*#####################################################################*/
+
+.flexContainer4 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-5);
+    margin: auto;
+
+    --border-color: var(--color-border);
+
+    hr {
+        height: 1px;
+        color: var(--border-color);
+        width: 100%;
+    }
 }
 
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+
+@media screen and (min-width: 960px) {
+    .flexContainer4 {
+        flex-direction: row;
+
+        --border-color: var(--color-border);
+    }
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+/*#####################################################################*/
+
+.flexContainer5 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-5);
+    width: 100%;
+
+    --border-color: var(--color-border);
+
+
+    hr {
+        color: transparent;
+        border: 1px solid var(--border-color);
+        width: 100%;
+    }
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+/*#####################################################################*/
+
+.flexContainer6 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--dimension-1);
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
+/*#####################################################################*/
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.xxlContainer {
+    max-width: var(--max-width-xxl);
+    margin: auto;
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
+/*#####################################################################*/
 
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+.mContainer {
+    max-width: var(--max-widht-m);
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+/*#####################################################################*/
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+.ctaContainer {
+    background: linear-gradient(180deg, var(--color-blue-3) 0%, var(--color-blue-2) 100%);
+    color: var(--color-white-1);
+}
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+/*#####################################################################*/
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+.verticalRule {
+    border-left: none;
+    margin-left: 0;
+}
+
+@media screen and (min-width: 960px) {
+    .verticalRule {
+        border-left: 1px solid var(--color-border);
+        padding-left: var(--spacing-global);
+    }
+}
+
+/*##################################################*/
+
+@media screen and (min-width: 960px) {
+    .mobileOnly{
+        display: none;
+    }
+}
+
+/*################*/
+/*# ALERTDIALOGE #*/
+/*################*/
+
+.AlertDialogOverlay {
+    backdrop-filter: blur(2px);
+    position: fixed;
+    inset: 0;
+    animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.AlertDialogContent {
+    background-color: var(--color-background);
+    border-radius: var(--radius-1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% - var(--spacing-global)), -50%);
+    /*width: ;*/
+    width: 100vw;
+    margin: 0 var(--spacing-global);
+    max-width: var(--max-widht-m);
+    padding: var(--dimension-3);
+    animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+
+    border: 1px solid var(--color-border);
+
+    --text-color: var(--color-text);
+    --background-color: var(--color-background);
+    --foreground-color: var(--color-foreground);
+
+    .AlertDialogTitle {
+        margin-bottom: var(--dimension-2);
+        color: var(--text-color);
+    }
+
+    .AlertDialogDescription {
+
+        margin-bottom: var(--dimension-2);
+    }
+
+    button {
+        padding: var(--dimension-1) var(--dimension-2);
+        background-color: var(--foreground-color);
+        border-radius: var(--radius-1);
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+.AlertDialogContent:focus {
+    outline: none;
+}
+
+@keyframes overlayShow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes contentShow {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
 }

@@ -1,5 +1,5 @@
 export interface SmileMakeoverIconPropTypes {
-    styling: string
+    styling?: string
 };
 
 const SmileMakeoverIcon = ({styling}: SmileMakeoverIconPropTypes) => {
